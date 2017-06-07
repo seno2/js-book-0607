@@ -15,7 +15,16 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログ（入力したコードと実行結果）をコピーして、下記に貼り付ける
 
 ```
-【ここにConsoleログを記入】
+function sum() {
+    var total = 0;
+    for (var counter = 1; counter <= 10; counter++) {
+      total += counter;
+    }
+    window.alert(total);
+}
+undefined
+sum();
+undefined
 ```
 
 ### 4-2-1 引数 (p.81)
@@ -28,7 +37,15 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログをコピーして、下記に貼り付ける
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeTo) {
+var total = 0;
+for (var counter = 1; counter <= rangeTo; counter++) {
+  total += counter;
+}
+window.alert(total);
+}
+undefined
+
 ```
 
 - p.82 リスト4.3: `list4-3.js` に記入する
@@ -40,7 +57,18 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログをコピーして、下記に貼り付ける
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeFrom, rangeTo){
+var total =0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+window.alert(total);
+}
+undefined
+sum(1,10)
+undefined
+sum(2,5)
+undefined
 ```
 
 以下、p.83「4-2-2 デフォルト引数」の上の行までは、自分で読んでください（入力は不要）。
@@ -57,7 +85,26 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログをコピーして、下記に貼り付ける
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeFrom, rangeTo = 10) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+total += counter;
+}
+window.alert(total);
+}
+undefined
+sum(1);
+undefined
+function sum(rangeTo, rangeFrom = 1) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+window.alert(total);
+}
+undefined
+sum(10);
+undefined
 ```
 
 - **ここでGit(SourceTree)でステージング→commitしてください。**
@@ -70,7 +117,49 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - （p.89 Columnは記入不要（以下も同様））
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeFrom, rangeTo) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+window.alert(total);
+}
+undefined
+total;
+0
+sum(2,5);
+undefined
+total;
+0
+var hoge = 5;
+function testScope() {
+  window.alert(hoge);
+}
+undefined
+testScope();
+undefined
+function sum(rangeFrom, rangeTo) {
+  let total = 0;
+  for (let counter = rangeFrom; counter <= rangeTo; counter++) {
+    total += counter;
+  }
+window.alert(total);
+}
+undefined
+function sum(rangenGrom, rangeTo) {
+let total =0;
+for (let counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+window.alert(counter);
+}
+undefined
+sum(1,10);
+Uncaught ReferenceError: rangeFrom is not defined
+    at sum (<anonymous>:3:20)
+    at <anonymous>:1:1
+sum @ VM2007:3
+(anonymous) @ VM2021:1
 ```
 
 ### 4-2-4 返り値 (p.88 中央)
@@ -82,7 +171,18 @@ README.mdを編集して、「【ここにConsoleログを記入】」の部分�
 - ログをコピーして、下記に貼り付ける
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeFrom, rangeTo, withDialog) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+if (withDialog) {
+ window.alert(total);
+}else{
+console.log(total);
+}
+}
+undefined
 ```
 
 ### 4-3-1 配列の作り方 (p.95)
