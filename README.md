@@ -183,6 +183,55 @@ console.log(total);
 }
 }
 undefined
+function sum(rangeFrom, rangeTo, withDialog) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+if (withDialog) {
+ window.alert(total);
+}else{
+console.log(total);
+}
+}
+undefined
+var total =0;
+function sum(rangeFrom, rangeTo) {
+for (var counter = rangeFrom; counter <=rangeTo; counter++) {
+  total += counter;
+}
+}
+undefined
+sum(1,10);
+undefined
+window.alert(total);
+undefined
+sum(1,10);
+undefined
+window.alert(total)
+undefined
+function sum(rangeFrom, rangeTo) {
+  var total = 0;
+  for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+    total += counter;
+  }
+return total;
+}
+undefined
+sum(1,10);
+55
+window.alert(sum(1,10));
+undefined
+function isNarrow() {
+  return window.innerWidth < 1000;
+}
+undefined
+if (isNarrow()) {
+window.alert('狭いです');
+} else {
+    window.alert('広いです');
+}
+undefined
 ```
 
 ### 4-3-1 配列の作り方 (p.95)
@@ -192,7 +241,55 @@ undefined
 - （p.98 Columnは記入不要）
 
 ```
-【ここにConsoleログを記入】
+function sum(rangeFrom, rangeTo, withDialog) {
+var total = 0;
+for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+  total += counter;
+}
+if (withDialog) {
+ window.alert(total);
+}else{
+console.log(total);
+}
+}
+undefined
+var total =0;
+function sum(rangeFrom, rangeTo) {
+for (var counter = rangeFrom; counter <=rangeTo; counter++) {
+  total += counter;
+}
+}
+undefined
+sum(1,10);
+undefined
+window.alert(total);
+undefined
+sum(1,10);
+undefined
+window.alert(total)
+undefined
+function sum(rangeFrom, rangeTo) {
+  var total = 0;
+  for (var counter = rangeFrom; counter <= rangeTo; counter++) {
+    total += counter;
+  }
+return total;
+}
+undefined
+sum(1,10);
+55
+window.alert(sum(1,10));
+undefined
+function isNarrow() {
+  return window.innerWidth < 1000;
+}
+undefined
+if (isNarrow()) {
+window.alert('狭いです');
+} else {
+    window.alert('広いです');
+}
+undefined
 ```
 
 ### 4-3-3 関数と組み合わせて使う (p.99)
@@ -201,7 +298,18 @@ undefined
 - p.99～101（「確認テスト」の上まで） 黒い枠で囲まれた部分（白地）をConsoleで実行する
 
 ```
-【ここにConsoleログを記入】
+function calculateTaxIncluding(prices) {
+  var results = [];
+ for (var index = 0, length = prices.length; index < length; index++)
+ {
+results.push(prices[index] * 1.08);
+ }
+return results;
+}
+undefined
+calculteTaxIncuding([100,200,40,50]);
+calculateTaxIncluding([100,200,40,50]);
+(4) [108, 216, 43.2, 54]
 ```
 
 - **ここでGit(SourceTree)でステージング→commitしてください。**
